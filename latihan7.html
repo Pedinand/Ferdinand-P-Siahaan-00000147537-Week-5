@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <title>Grafik Kehadiran Mahasiswa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .bar-line {
+            font-size: 24px;
+            margin: 10px 0;
+            font-weight: normal;
+        }
+
+        .day-name {
+            display: inline-block;
+            width: 120px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const hari = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"];
+        const data = [];
+
+        for (let i = 0; i < hari.length; i++) {
+            let jumlah = Number(window.prompt("Masukkan jumlah mahasiswa hadir hari " + hari[i] + ":"));
+            data.push(jumlah);
+        }
+
+        document.write("<h2>Grafik Jumlah Kehadiran Mahasiswa</h2>");
+
+        for (let i = 0; i < hari.length; i++) {
+            let x = "x".repeat(data[i]);
+            document.write("<div class='bar-line'><span class='day-name'>" + hari[i] + ":</span> " + x + "</div>");
+        }
+    </script>
+</body>
+</html>

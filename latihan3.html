@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Salam</title>
+</head>
+<body>
+    <script>
+        let jam = Number(window.prompt("Jam Sekarang"));
+
+        if (jam >= 6 && jam <= 10) {
+            document.write("Selamat Pagi");
+        } else if (jam >= 11 && jam <= 14) {
+            document.write("Selamat Siang");
+        } else if (jam >= 15 && jam <= 17) {
+            document.write("Selamat Sore");
+        } else if (jam >= 18 && jam <= 22) {
+            document.write("Selamat Malam");
+        } else {
+            document.write("Selamat Tidur");
+        }
+    </script>
+</body>
+</html>

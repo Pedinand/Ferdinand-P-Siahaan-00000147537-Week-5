@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+    <script>
+        function hitungNilaiAkhir(tugas, uts, uas) {
+            return (tugas * 0.3) + (uts * 0.3) + (uas * 0.4);
+        }
+
+        function getGrade(nilai) {
+            if (nilai >= 85) {
+                return "A";
+            } else if (nilai >= 80) {
+                return "A-";
+            } else if (nilai >= 75) {
+                return "B+";
+            } else if (nilai >= 70) {
+                return "B";
+            } else if (nilai >= 65) {
+                return "B-";
+            } else if (nilai >= 60) {
+                return "C+";
+            } else if (nilai >= 55) {
+                return "C";
+            } else if (nilai >= 45) {
+                return "D";
+            } else if (nilai >= 0) {
+                return "E";
+            } else {
+                return "F";
+            }
+        }    
+
+        let jumlahMhs = Number(window.prompt("Jumlah mahasiswa:"));
+
+        for (let i = 1; i <= jumlahMhs; i++) {
+            let nama = window.prompt("Nama");
+            let tugas = Number(window.prompt("Tugas"));
+            let uts = Number(window.prompt("UTS"));
+            let uas = Number(window.prompt("UAS"));
+
+            let nilaiAkhir = hitungNilaiAkhir(tugas, uts, uas);
+            let grade = getGrade(nilaiAkhir);
+
+            document.write("<br /><br />" + i + ". " + nama + "<br />");
+            document.write("Tugas: " + tugas + "<br />");
+            document.write("UTS: " + uts + "<br />");
+            document.write("UAS: " + uas + "<br />");
+            document.write("Nilai Akhir: " + nilaiAkhir.toFixed(2) + "<br />");
+            document.write("Grade: " + grade + "<br />");
+        } 
+    </script>
+</body>
+</html>

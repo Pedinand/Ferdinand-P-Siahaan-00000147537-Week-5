@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Bilangan Prima</title>
+</head>
+<body>
+    <script>
+        let angka = Number(window.prompt("Masukkan angka:"));
+        for (let i = 2; i <= angka; i++) {
+            let isPrima = true;
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                    isPrima = false;
+                    break;
+                }
+            }
+            if (isPrima) {
+                document.write(i + " ");
+            }
+        }
+    </script>
+</body>
+</html>
